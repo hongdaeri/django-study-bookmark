@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}북마크 삭제{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="alert alert-danger">Do you want to delete BookMark "{{object.site_name}}"?</div>
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+
+{% endblock %}
